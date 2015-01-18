@@ -50,3 +50,4 @@ This script was written on an OSX machine so assumes that you have the following
 ####TODO
 
 - Create option to rename files to the title of the item + original file extension
+- Create start and end paramaters to limit range of downloaded podcasts
