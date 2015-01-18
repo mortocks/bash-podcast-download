@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Usage sh podcast-download http://myfeed.com/rss /PATH/TO/FOLDER
 
-# Variables
+# Optional Variables
+# You can hardcode the feed and url variables here to avoid sending them when envoking the script
+
 FEED='' # URL TO THE RSS FEED
 FOLDER='' # RELATIVE PATH OF FOLDER TO DOWNLOAD FILES TO
 

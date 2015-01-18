@@ -10,7 +10,9 @@ Call the script using
 
 You can hardcode the feed and output path by changing the variables at the top of the file. You can then ommit the feed and folder when envoking the script
 
-	# Variables
+	# Optional Variables
+	# You can hardcode the feed and url variables here to avoid sending them when envoking the script
+	
 	FEED='http://myfeed.com/rss'
 	FOLDER='/PATH/TO/MY/FOLDER'
 
