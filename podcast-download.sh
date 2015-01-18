@@ -3,12 +3,12 @@
 #
 # Description: A simple bash script to download all media from a podcast XML feed
 #
-# Usage: 	sh podcast-download http://myfeed.com/rss /PATH/TO/FOLDER
+# Usage: sh podcast-download.sh http://myfeed.com/rss /PATH/TO/FOLDER
 #
-# Author: 	Andrew Morton
-# Url: 		https://github.com/mortocks/bash-podcast-download
+# Author: Andrew Morton
+# Url: https://github.com/mortocks/bash-podcast-download
 #
-# Licence: 	GNU v3.0
+# Licence: GNU v3.0
  
 
 # Optional Variables
