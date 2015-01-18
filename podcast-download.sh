@@ -29,6 +29,8 @@ fi
 
 
 STARTTIME=`date +%s`
+
+
 # Get the full XML feed | extract the enclosure url attribute | extract the url
 MEDIA=$(curl -s $FEED | xpath '/rss/channel/item/enclosure/@url' 2>/dev/null | egrep -o 'https?://[^"<]+' )
 
@@ -48,7 +50,7 @@ do
 		echo "$FILE_NAME Exists"
 	else 
 		DATE=$(date)
-		echo "Download $FOLDER/$FILE_NAME $FILE_NAME $DATE"
+		echo "Download $URL $FOLDER/$FILE_NAME $FILE_NAME $DATE"
 		curl -s -L $URL > $FOLDER/$FILE_NAME
 	fi 
 
