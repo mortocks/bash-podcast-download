@@ -4,7 +4,7 @@ A simple bash script to download all media from a podcast feed
 ##Usage
 Call the script using
 
-	sh bash-podcast-download.sh http://myfeed.com/rss /PATH/TO/DOWNLOAD/FOLDER
+	sh podcast-download.sh http://myfeed.com/rss /PATH/TO/DOWNLOAD/FOLDER
 	
 ###Optional
 
