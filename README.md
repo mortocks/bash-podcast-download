@@ -1,5 +1,5 @@
-# bash-podcast-download
-A small bash script to download all media from a podcast feed
+# Bash Podcast Download
+A simple bash script to download all media from a podcast feed
 
 ##Usage
 Change variables at the top of the file for the feed url and the folder to download the files to.
@@ -28,6 +28,14 @@ Assumes that the RSS feed is formatted correctly with media in the correct hirac
 	</channel>
 	</rss>
 	
+
+##Requirments
+This script was written on an OSX machine so assumes that you have the following programs installed
+
+- curl
+- xpath
+- egrep
+- sed
 
 ##TODO
 
