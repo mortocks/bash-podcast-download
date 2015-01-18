@@ -8,8 +8,7 @@ If the media file already exsists then the file is not downloaded.
 
 Assumes that the RSS feed is formatted correctly with media in the correct hirachy
 
-...
-
+...xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
