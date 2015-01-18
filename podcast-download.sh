@@ -23,12 +23,14 @@ fi
 
 # Create destination folder if it doesn't exsist
 if [ -d $FOLDER ]; then
+	echo "$FOLDER exists"
 else 
-	echo "Creating folder $FOLDER"
+	echo "Creating directory $FOLDER"
 	mkdir $FOLDER
 fi 
 
 
+STARTTIME=`date +%s`
 # Get the full XML feed | extract the enclosure url attribute | extract the url
 MEDIA=$(curl -s $FEED | xpath '/rss/channel/item/enclosure/@url' 2>/dev/null | egrep -o 'http?://[^"<]+' )
 
@@ -47,8 +49,12 @@ do
 	if [ -f $FOLDER/$FILE_NAME ]; then
 		echo "$FILE_NAME Exists"
 	else 
-		echo "Download $FOLDER/$FILE_NAME"
-	#	curl -s -L $URL > $FOLDER/$FILE_NAME
+		DATE=$(date)
+		echo "Download $FOLDER/$FILE_NAME $FILE_NAME $DATE"
+		curl -s -L $URL > $FOLDER/$FILE_NAME
 	fi 
 
 done <<< "$MEDIA"
+
+ENDTIME=`date +%s`
+echo Finished total time `expr $ENDTIME - $STARTTIME`s.
