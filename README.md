@@ -6,7 +6,7 @@ Call the script using
 
 	sh bash-podcast-download.sh http://myfeed.com/rss /PATH/TO/DOWNLOAD/FOLDER
 	
-###OPTIONAL
+###Optional
 
 You can hardcode the feed and output path by changing the variables at the top of the file. You can then ommit the feed and folder when envoking the script
 
@@ -19,6 +19,7 @@ If the media file already exsists then the file is not downloaded.
 
 Assumes that the RSS feed is formatted correctly with media in the correct hirachy
 
+####Feed requirments
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/">
@@ -36,7 +37,7 @@ Assumes that the RSS feed is formatted correctly with media in the correct hirac
 	</rss>
 	
 
-##Requirments
+####Platform Requirments
 This script was written on an OSX machine so assumes that you have the following programs installed
 
 - curl
@@ -44,6 +45,6 @@ This script was written on an OSX machine so assumes that you have the following
 - egrep
 - sed
 
-##TODO
+####TODO
 
 - Create option to rename files to the title of the item + original file extension
