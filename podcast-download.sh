@@ -3,8 +3,9 @@
 
 # Variables
 FEED='http://myfeed.com/rss'
-FOLDER='/path/to/my/fo;der'
+FOLDER='/PATH/TO/MY/FOLDER'
 
+# Create destination folder if it doesn't exsist
 if [ -d $FOLDER ]; then
 	echo "$FOLDER exists"
 else 
@@ -26,7 +27,7 @@ do
 	# Remove any additional query params in the filename by removing everything after ?
 	FILE_NAME=${AFTER_SLASH%%\?*}
 
-	#if file as already been downloaded ignore
+	# If file as already been downloaded ignore
 	if [ -f $FOLDER/$FILE_NAME ]; then
 		echo "$FILE_NAME Exists"
 	else 
