@@ -4,7 +4,6 @@
 
 # Optional Variables
 # You can hardcode the feed and url variables here to avoid sending them when envoking the script
-
 FEED='' # URL TO THE RSS FEED
 FOLDER='' # RELATIVE PATH OF FOLDER TO DOWNLOAD FILES TO
 
@@ -48,11 +47,12 @@ do
 	# Remove any additional query params in the filename by removing everything after ?
 	FILE_NAME=${AFTER_SLASH%%\?*}
 
+	DATE=$(date)
+
 	# If file as already been downloaded ignore
 	if [ -f $FOLDER/$FILE_NAME ]; then
-		echo "$FILE_NAME Exists"
+		echo "Exsists $URL $FOLDER/$FILE_NAME $FILE_NAME $DATE"
 	else 
-		DATE=$(date)
 		echo "Download $URL $FOLDER/$FILE_NAME $FILE_NAME $DATE"
 		curl -s -L $URL > $FOLDER/$FILE_NAME
 	fi 
