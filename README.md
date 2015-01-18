@@ -2,11 +2,18 @@
 A simple bash script to download all media from a podcast feed
 
 ##Usage
-Change variables at the top of the file for the feed url and the folder to download the files to.
-
 Call the script using
 
-	sh /PATH/TO/FOLDER/bash-podcast-download.sh
+	sh bash-podcast-download.sh http://myfeed.com/rss /PATH/TO/DOWNLOAD/FOLDER
+	
+###OPTIONAL
+
+You can hardcode the feed and output path by changing the variables at the top of the file. You can then ommit the feed and folder when envoking the script
+
+	# Variables
+	FEED='http://myfeed.com/rss'
+	FOLDER='/PATH/TO/MY/FOLDER'
+
 
 If the media file already exsists then the file is not downloaded. 
 
@@ -39,5 +46,4 @@ This script was written on an OSX machine so assumes that you have the following
 
 ##TODO
 
-- Create optional variables to pass url and feed
 - Create option to rename files to the title of the item + original file extension

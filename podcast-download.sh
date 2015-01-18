@@ -2,13 +2,29 @@
 
 
 # Variables
-FEED='http://myfeed.com/rss'
-FOLDER='/PATH/TO/MY/FOLDER'
+FEED='' # URL TO THE RSS FEED
+FOLDER='' # RELATIVE PATH OF FOLDER TO DOWNLOAD FILES TO
+
+echo $1 $2
+
+# Override hardcoded feeds with passed variables
+[ -n "$1" ] && FEED=$1
+[ -n "$2" ] && FOLDER=$2
+
+# Check if feed is empty
+if [ -z "$FEED" ]; then
+	echo "Error: No feed specified"; exit
+fi
+
+# Check if path is empty
+if [ -z "$FOLDER" ]; then
+	echo "Error: No folder specified"; exit
+fi
 
 # Create destination folder if it doesn't exsist
 if [ -d $FOLDER ]; then
-	echo "$FOLDER exists"
 else 
+	echo "Creating folder $FOLDER"
 	mkdir $FOLDER
 fi 
 
@@ -32,7 +48,7 @@ do
 		echo "$FILE_NAME Exists"
 	else 
 		echo "Download $FOLDER/$FILE_NAME"
-		curl -s -L $URL > $FOLDER/$FILE_NAME
+	#	curl -s -L $URL > $FOLDER/$FILE_NAME
 	fi 
 
 done <<< "$MEDIA"
