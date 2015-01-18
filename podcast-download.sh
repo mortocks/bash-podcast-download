@@ -5,8 +5,6 @@
 FEED='' # URL TO THE RSS FEED
 FOLDER='' # RELATIVE PATH OF FOLDER TO DOWNLOAD FILES TO
 
-echo $1 $2
-
 # Override hardcoded feeds with passed variables
 [ -n "$1" ] && FEED=$1
 [ -n "$2" ] && FOLDER=$2
