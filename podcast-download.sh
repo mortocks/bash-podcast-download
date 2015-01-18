@@ -14,7 +14,7 @@ fi
 
 
 # Get the full XML feed | extract the enclosure url attribute | extract the url
-MEDIA=$(curl -s $FEED | xpath '/rss/channel/item/enclosure/@url' | egrep -o 'http?://[^"<]+' )
+MEDIA=$(curl -s $FEED | xpath '/rss/channel/item/enclosure/@url' 2>/dev/null | egrep -o 'http?://[^"<]+' )
 
 
 # Loop through and download file if not already downloaded
